@@ -4,13 +4,12 @@ using UnityEngine;
 
 public class gridSpawner : MonoBehaviour {
 
-	public int length = 0;
+	public int length = 1;
 	public GameObject PointPrefab;
 
 	public void ChangeLength (string Text)
 	{
 		length = int.Parse(Text);
-		Debug.Log(length);
 	}
 
 	void SpawnGrid ()
@@ -26,14 +25,12 @@ public class gridSpawner : MonoBehaviour {
 			}
 		}
 	}
-
-	void Start () 
-	{
-		SpawnGrid();
-	}
 	
 	void Update () 
 	{
-		
+		if (Input.GetKeyDown(KeyCode.F))
+		{
+			SpawnGrid();
+		}
 	}
 }

@@ -68,5 +68,10 @@ public class pointController : MonoBehaviour {
 				transform.localScale = new Vector3 (1f, 1f, 1f);
 			}
 		}
+
+		if (Input.GetKeyDown(KeyCode.F))
+		{
+			Destroy(gameObject);
+		}
 	}
 }

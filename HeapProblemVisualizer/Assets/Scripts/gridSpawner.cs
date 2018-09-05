@@ -7,6 +7,12 @@ public class gridSpawner : MonoBehaviour {
 	public int length = 0;
 	public GameObject PointPrefab;
 
+	public void ChangeLength (string Text)
+	{
+		length = int.Parse(Text);
+		Debug.Log(length);
+	}
+
 	void SpawnGrid ()
 	{
 		for (int x = 0; x < length; x++)

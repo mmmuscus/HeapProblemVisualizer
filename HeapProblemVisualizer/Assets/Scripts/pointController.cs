@@ -39,7 +39,7 @@ public class pointController : MonoBehaviour {
 
 	void Update () 
 	{
-		if (Input.GetKeyDown(KeyCode.T) && !isWinningPosition)
+		if (Input.GetKeyDown(KeyCode.R) && !isWinningPosition)
 		{
 			transparency++;
 
@@ -49,6 +49,24 @@ public class pointController : MonoBehaviour {
 			}
 
 			this.GetComponent<Renderer>().material.color = new Color(1, 1, 1, transparency);
+		}
+
+		if (Input.GetKeyDown(KeyCode.Q))
+		{
+			transform.localScale -= new Vector3 (0.1f, 0.1f, 0.1f);
+			if (transform.localScale == new Vector3 (0.4f, 0.4f, 0.4f))
+			{
+				transform.localScale = new Vector3 (0.5f, 0.5f, 0.5f);
+			}
+		}
+
+		if (Input.GetKeyDown(KeyCode.E))
+		{
+			transform.localScale += new Vector3 (0.1f, 0.1f, 0.1f);
+			if (transform.localScale == new Vector3 (1.1f, 1.1f, 1.1f))
+			{
+				transform.localScale = new Vector3 (1f, 1f, 1f);
+			}
 		}
 	}
 }

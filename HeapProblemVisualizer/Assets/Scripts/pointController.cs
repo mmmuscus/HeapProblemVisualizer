@@ -5,6 +5,7 @@ using UnityEngine;
 public class pointController : MonoBehaviour {
 
 	public bool isWinningPosition = true;
+	private int transparency = 1;
 
 	private GameObject[] Points;
 
@@ -40,7 +41,14 @@ public class pointController : MonoBehaviour {
 	{
 		if (Input.GetKeyDown(KeyCode.T) && !isWinningPosition)
 		{
-			this.GetComponent<Renderer>().material.color = new Color(0, 0, 0, 0);
+			transparency++;
+
+			if (transparency == 2)
+			{
+				transparency = 0;
+			}
+
+			this.GetComponent<Renderer>().material.color = new Color(1, 1, 1, transparency);
 		}
 	}
 }

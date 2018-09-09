@@ -9,27 +9,34 @@ public class pointController : MonoBehaviour {
 
 	private GameObject[] Points;
 
+	private GameObject Spawner;
+
 	void Start () 
 	{
-		Points = GameObject.FindGameObjectsWithTag("Point");
+		// Points = GameObject.FindGameObjectsWithTag("Point");
 
-		foreach (GameObject P in Points)
-		{
-			if (P.transform.position.x == this.transform.position.x && P.transform.position.y == this.transform.position.y && P.transform.position.z < this.transform.position.z && P.GetComponent<pointController>().isWinningPosition)
-			{
-				isWinningPosition = false;
-			}
+		// foreach (GameObject P in Points)
+		// {
+		// 	if (P.transform.position.x == this.transform.position.x && P.transform.position.y == this.transform.position.y && P.transform.position.z < this.transform.position.z && P.GetComponent<pointController>().isWinningPosition)
+		// 	{
+		// 		isWinningPosition = false;
+		// 	}
 
-			if (P.transform.position.x == this.transform.position.x && P.transform.position.z == this.transform.position.z && P.transform.position.y < this.transform.position.y && P.GetComponent<pointController>().isWinningPosition)
-			{
-				isWinningPosition = false;
-			}
+		// 	if (P.transform.position.x == this.transform.position.x && P.transform.position.z == this.transform.position.z && P.transform.position.y < this.transform.position.y && P.GetComponent<pointController>().isWinningPosition)
+		// 	{
+		// 		isWinningPosition = false;
+		// 	}
 
-			if (P.transform.position.y == this.transform.position.y && P.transform.position.z == this.transform.position.z && P.transform.position.x < this.transform.position.x && P.GetComponent<pointController>().isWinningPosition)
-			{
-				isWinningPosition = false;
-			}
-		}
+		// 	if (P.transform.position.y == this.transform.position.y && P.transform.position.z == this.transform.position.z && P.transform.position.x < this.transform.position.x && P.GetComponent<pointController>().isWinningPosition)
+		// 	{
+		// 		isWinningPosition = false;
+		// 	}
+		// }
+
+		// Spawner = GameObject.FindWithTag("Spawner");
+
+		// isWinningPosition = Spawner.GetComponent<gridSpawner>().GridDemo[(int)transform.position.x, (int)transform.position.y, (int)transform.position.z];
+		// Debug.Log(transform.position.x + " " + transform.position.y + " " + transform.position.z + " " + isWinningPosition);
 
 		if (isWinningPosition)
 		{
